@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Basket.Register
+namespace Ordering.Register
 {
-    public static class BasketModule
+    public static class OrderingModule
     {
-        public static IServiceCollection AddBasketModule(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddOrderingModule(this IServiceCollection services, IConfiguration configuration)
         {
             return services;
         }

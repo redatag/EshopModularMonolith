@@ -1,3 +1,7 @@
+using Basket.Register;
+using Catalog.Register;
+using Ordering.Register;
+
 // Initialize the web application builder
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,8 +15,14 @@ builder.Services.AddControllers();
 //Register Custm services
 
 //builder.Services.AddTransient<IMyService,MyService>(); //create new instance of the service each time it is requested
-builder.Services.AddScoped<ILogger, ILogger>(); //Create new instance of the service per request(Most used)
-builder.Services.AddSingleton<IConfiguration>(builder.Configuration);//create single instancce from the service  for the life time of the application
+//builder.Services.AddScoped<ILogger, ILogger>(); //Create new instance of the service per request(Most used)
+//builder.Services.AddSingleton<IConfiguration>(builder.Configuration);//create single instancce from the service  for the life time of the application
+
+
+builder.Services
+    .AddCatalogModule(builder.Configuration)
+    .AddBasketModule(builder.Configuration)
+    .AddOrderingModule(builder.Configuration);
 
 var app = builder.Build();
 
