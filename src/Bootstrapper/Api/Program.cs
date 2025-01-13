@@ -1,6 +1,4 @@
-using Basket.Register;
-using Catalog.Register;
-using Ordering.Register;
+ 
 
 // Initialize the web application builder
 
@@ -29,6 +27,11 @@ var app = builder.Build();
 //app.MapGet("/", () => "Hello World!");
 
 //Configure the http request pipeline and build the web app
+
+app
+    .UseCatalogModule()
+    .UseBasketModule()
+    .UseOrderingModule();
 
 //run the web app
 app.Run();
