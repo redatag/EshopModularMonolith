@@ -9,5 +9,19 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Shared\Shared\Shared.csproj" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Internal\Data\Configurations\" />
+    <Folder Include="Internal\Data\Migrations\" />
+    <Folder Include="Internal\Data\Seed\" />
+    <Folder Include="Internal\Products\Features\CreateProduct\" />
+    <Folder Include="Internal\Products\Features\GetProductById\" />
+    <Folder Include="Internal\Products\Features\GetProductByCategory\" />
+    <Folder Include="Internal\Products\Features\DeleteProduct\" />
+    <Folder Include="Internal\Products\Features\GetAllProducts\" />
+    <Folder Include="Internal\Products\Features\UpdateProduct\" />
+    <Folder Include="Internal\Products\Models\" />
+    <Folder Include="Shared\" />
+  </ItemGroup>
 
 </Project>
