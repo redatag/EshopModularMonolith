@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Shared.DDD
 {
     // INotification is an interface in MediatR Library hanld events asynchronously
-    public class IDomainEvent : INotification
+    public interface IDomainEvent : INotification
     {
         Guid EventId => Guid.NewGuid(); //unique identifier for event
         public DateTime OccurredOn => DateTime.Now;//timstamp when the event is occured

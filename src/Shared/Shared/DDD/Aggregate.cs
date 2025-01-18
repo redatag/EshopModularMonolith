@@ -23,7 +23,7 @@ namespace Shared.DDD
 
         public IDomainEvent[] ClearDomainEvents()
         {
-            IDomainEvent dequeuedEvents = _domainEvents.ToArray();
+            var dequeuedEvents = _domainEvents.ToArray();
             _domainEvents.Clear();
             return dequeuedEvents;
 
